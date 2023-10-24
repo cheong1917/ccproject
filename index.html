@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		      name="viewport">
+		<meta content="ie=edge" http-equiv="X-UA-Compatible">
+		<!--<link href="normalize.css" rel="stylesheet">-->
+		<script src="/libs/scrollReveal/scrollreveal.min.js"></script>
+		<link rel="stylesheet" href="libs/glide/glide.core.min.css">
+		<link rel="stylesheet" href="libs/glide/glide.theme.min.css">
+		<link href="style.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+		<title>test</title>
+	</head>
+	<body>
+		<header>
+			<div class="logo">TestDemo</div>
+			<nav>
+				<a href="#home">首页</a>
+				<a href="#into1">关于我们</a>
+				<a href="#into2">售后保障</a>
+				<a href="#into3">Lorem ipsum</a>
+				<a href="#into4">Lorem ipsum</a>
+				<a href="#into6">Lorem ipsum</a>
+				<i class="fa-solid fa-globe-americas fa-sm"></i>
+			</nav>
+			<!--折叠导航-->
+			<div class="burger">
+				<div class="burger-line1"></div>
+				<div class="burger-line2"></div>
+				<div class="burger-line3"></div>
+			</div>
+		</header>
+		<!--carousel-->
+		<div id="home" class="glide">
+			<div class="glide__track" data-glide-el="track">
+				<!--item的容器--s-->
+				<div class="glide__slides">
+					<!--item1-->
+					<div class="glide__slide">
+						<div class="slide-caption">
+							<h1>
+								Lorem ipsum dolor sit.
+							</h1>
+							<h3>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut labore placeat totam voluptates?
+							</h3>
+							<button class="explore-btn">
+								探索更多
+							</button>
+						</div>
+						<div class="backdrop"></div>
+						<img alt="" src="https://picsum.photos/1920/1080"/>
+					</div>
+					<!--item2-->
+					<div class="glide__slide">
+						<div class="slide-caption textLeft">
+							<h1>
+								Lorem ipsum dolor.
+							</h1>
+							<h3>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolor error impedit ipsa, itaque
+								pariatur quae qui sed vero voluptate!
+							</h3>
+							<button class="explore-btn">
+								探索更多
+							</button>
+						</div>
+						<div class="backdrop"></div>
+						<video src="videos/city(19201080).mp4" muted autoplay loop></video>
+					</div>
+				</div>
+			</div>
+			
+			<div class="glide__arrows" data-glide-el="controls">
+				<button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+					<
+				</button>
+				<button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+					>
+				</button>
+			</div>
+			<div class="glide__bullets" data-glide-el="controls[nav]">
+				<button class="glide__bullet" data-glide-dir="=0"></button>
+				<button class="glide__bullet" data-glide-dir="=1"></button>
+			</div>
+		</div>
+		<!--span2-a2-->
+		<div class="content-wrapper">
+			<!--into1-->
+			<section id="into1" class="about-us">
+				<h2 class="title1">关于我们</h2>
+				<p class="intro">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque doloribus fugit harum ipsum officiis
+					pariatur quod rerum totam voluptates voluptatibus?
+				</p>
+				<div id="features-container" class="features"></div>
+			</section>
+			
+			<!--into2-->
+			<section id="into2" class="showcases section-bg">
+				<h2 class="title1">售后保障</h2>
+				<div class="filter-btns">
+					<button class="filter-btn active" data-filter="*">all item</button>
+					<button class="filter-btn" data-filter=".Classification1">item1</button>
+					<button class="filter-btn" data-filter=".Classification2">item2</button>
+					<button class="filter-btn" data-filter=".Classification3">item3</button>
+				</div>
+				<div id="Cases" class="cases"></div>
+			</section>
+			
+			<!--into3-->
+			<section id="into3" class="service">
+				<h2 class="title1">Lorem ipsum</h2>
+				<p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore esse iusto, sed
+					sit soluta.</p>
+				<div id="services-container" class="services"></div>
+			</section>
+			
+			<!--into4-->
+			<section id="into4" class="team-intro section-bg">
+				<h2 class="title1">Lorem ipsum</h2>
+				<div class="team-contents">
+					<!--card1-->
+					<div class="team-content">
+						<div class="profile-image">
+							<img src="https://picsum.photos/1000" alt="">
+						</div>
+						<h4 class="name">Lorem</h4>
+						<p class="position">Lorem ipsum dolor</p>
+						<ul class="icon-links">
+							<li>
+								<a href="">
+									<i class="fab fa-weixin"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fab fa-weibo"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fab fa-github"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fab fa-linkedin"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--card2-->
+					<div class="team-content">
+						<div class="profile-image">
+							<img src="https://picsum.photos/1100" alt="">
+						</div>
+						<h4 class="name">Lorem</h4>
+						<p class="position">Lorem ipsum dolor</p>
+						<ul class="icon-links">
+							<li>
+								<a href="">
+									<i class="fab fa-weixin"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fab fa-weibo"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fab fa-github"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fab fa-linkedin"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--card3-->
+					<div class="team-content">
+						<div class="profile-image">
+							<img src="https://picsum.photos/1200" alt="">
+						</div>
+						<h4 class="name">Lorem</h4>
+						<p class="position">Lorem ipsum dolor</p>
+						<ul class="icon-links">
+							<li>
+								<a href="">
+									<i class="fab fa-weixin"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fab fa-weibo"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fab fa-github"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fab fa-linkedin"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--card4-->
+					<div class="team-content">
+						<div class="profile-image">
+							<img src="https://picsum.photos/1300" alt="">
+						</div>
+						<h4 class="name">Lorem</h4>
+						<p class="position">Lorem ipsum dolor</p>
+						<ul class="icon-links">
+							<li>
+								<a href="">
+									<i class="fab fa-weixin"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fab fa-weibo"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fab fa-github"></i>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<i class="fab fa-linkedin"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			
+			<!--into5-->
+			<section class="data-section">
+				<div class="data-piece">
+					<i class="fas fa-code"></i>
+					<div class="num">999</div>
+					<div class="data-desc">行代码</div>
+				</div>
+				
+				<div class="data-piece">
+					<i class="fas fa-award"></i>
+					<div class="num">256</div>
+					<div class="data-desc">lorem</div>
+				</div>
+				
+				<div class="data-piece">
+					<i class="fas fa-laugh-wink"></i>
+					<div class="num">113</div>
+					<div class="data-desc">lorem</div>
+				</div>
+				
+				<div class="data-piece">
+					<i class="fas fa-folder"></i>
+					<div class="num">99</div>
+					<div class="data-desc">lorem</div>
+				</div>
+			</section>
+			
+			<!--into6-->
+			<section id="into6" class="company-activities">
+				<h2 class="title1">Lorem ipsum</h2>
+				<p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+				<div class="activities">
+					<div class="activity">
+						<div class="arc-img-wrapper">
+							<img src="https://picsum.photos/1920/1060" alt="">
+						</div>
+						<div class="meta">
+							<p class="date-published">
+								<i class="far fa-calendar"></i>
+								2023年10月22日
+							</p>
+							<p class="comments">
+								<i class="far fa-comments"></i>
+								50条评论
+							</p>
+						</div>
+						<h2 class="act-title">Lorem ipsum dolor sit amet</h2>
+						<article>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae consequuntur cupiditate
+							dignissimos distinctio exercitationem modi molestiae non qui voluptas
+						</article>
+						<div class="btnM">
+							<button class="read-more-btn">查看更多</button>
+						</div>
+					</div>
+					
+					<div class="activity">
+						<div class="arc-img-wrapper">
+							<img src="https://picsum.photos/1920/1065" alt="">
+						</div>
+						<div class="meta">
+							<p class="date-published">
+								<i class="far fa-calendar"></i>
+								2023年10月22日
+							</p>
+							<p class="comments">
+								<i class="far fa-comments"></i>
+								50条评论
+							</p>
+						</div>
+						<h2 class="act-title">Lorem ipsum dolor sit amet</h2>
+						<article>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae consequuntur cupiditate
+							dignissimos distinctio exercitationem modi molestiae non qui voluptas
+						</article>
+						<div class="btnM">
+							<button class="read-more-btn">查看更多</button>
+						</div>
+					</div>
+					
+					<div class="activity">
+						<div class="arc-img-wrapper">
+							<img src="https://picsum.photos/1920/1070" alt="">
+						</div>
+						<div class="meta">
+							<p class="date-published">
+								<i class="far fa-calendar"></i>
+								2023年10月22日
+							</p>
+							<p class="comments">
+								<i class="far fa-comments"></i>
+								50条评论
+							</p>
+						</div>
+						<h2 class="act-title">Lorem ipsum dolor sit amet</h2>
+						<article>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae consequuntur cupiditate
+							dignissimos distinctio exercitationem modi molestiae non qui voluptas
+						</article>
+						<div class="btnM">
+							<button class="read-more-btn">查看更多</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<footer>
+			<div class="footer-menus">
+				<div class="contact-us">
+					<p class="menu-title">联系我们</p>
+					<p>地址:Lorem ipsum dolor sit amet, consectetur.</p>
+					<p>电话:66666666</p>
+					<p>传真:+185186165412315</p>
+					<p>电子邮箱:testdemo@testdemo.com</p>
+				</div>
+				<div class="service-menu foot-menu">
+					<p class="menu-title">Lorem ipsum</p>
+					<ul class="menu-items">
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+					</ul>
+				</div>
+				<div class="service-menu foot-menu">
+					<p class="menu-title">Lorem ipsum</p>
+					<ul class="menu-items">
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+					</ul>
+				</div>
+				<div class="service-menu foot-menu">
+					<p class="menu-title">Lorem ipsum</p>
+					<ul class="menu-items">
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+					</ul>
+				</div>
+				<div class="service-menu foot-menu">
+					<p class="menu-title">Lorem ipsum</p>
+					<ul class="menu-items">
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+						<li>
+							<a href="#">Lorem ipsum</a>
+						</li>
+					</ul>
+				</div>
+				<p class="icp-info">Lorem ipsum dolor</p>
+				<p class="rights">Lorem ipsum dolor sit amet, consectetur</p>
+				<div class="scrollToTop">
+					<a href="#home"><i class="fas fa-chevron-up"></i></a>
+				</div>
+			</div>
+		</footer>
+		<script src="libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+		<script src="libs/isotope/isotope.pkgd.min.js"></script>
+		<script src="libs/glide/glide.min.js"></script>
+		<script src="libs/anime/anime.min.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
