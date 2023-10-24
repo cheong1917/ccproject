@@ -792,6 +792,7 @@ footer {
         padding: 24px 0;
         height: auto;
         row-gap: 24px;
+        background-size: 200%;
     }
 
     .showcases .case-item {
@@ -861,5 +862,12 @@ footer {
     .explore-btn {
         font-size: 14px;
         padding: 8px 18px;
+    }
+}
+
+@media (max-width: 466px) {
+    .data-section{
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
