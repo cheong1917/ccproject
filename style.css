@@ -6,6 +6,23 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* 设置滚动条的样式 */
+body::-webkit-scrollbar {
+    width: 0; /* 设置滚动条宽度为0 */
+    background: transparent; /* 设置滚动条背景为透明 */
+}
+
+/* 设置滚动条滑块的样式 */
+body::-webkit-scrollbar-thumb {
+    background: transparent; /* 设置滚动条滑块背景为透明 */
+}
+
+/* 设置滚动条轨道的样式 */
+body::-webkit-scrollbar-track {
+    background: transparent; /* 设置滚动条轨道背景为透明 */
+}
+
+
 img {
     width: 100%;
 }
@@ -32,17 +49,12 @@ header {
     height: 80px;
     padding: 0 40px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr 20px;
     align-items: center;
     position: relative;
     z-index: 200;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--text-color-lightest);
-}
 
 header nav {
     justify-self: end;
@@ -58,9 +70,51 @@ header nav a {
     margin: 0 24px;
 }
 
-header nav a:hover {
+header nav > *:hover {
     color: var(--primary-color);
 }
+
+.language {
+    justify-self: center;
+}
+
+.showLanguageMenu {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    top: 60px;
+    right: 0;
+
+}
+
+.LMenu {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--primary-color);
+    border-radius: 20px;
+}
+
+.option {
+    margin: 12px;
+    cursor: pointer;
+}
+
+.option:hover {
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text-color-light-gray);
+}
+
 
 header .burger {
     display: none;
@@ -73,10 +127,17 @@ header.sticky {
     animation: dropDown 0.5s ease-in-out forwards;
 }
 
-header.sticky .logo,
-header.sticky nav a,
-header.sticky nav i {
+header.sticky a,
+header.sticky .language {
     color: var(--text-color-darker);
+}
+
+header .language {
+    color: white;
+}
+
+header .language:hover {
+    color: var(--primary-color);
 }
 
 @keyframes dropDown {
@@ -639,15 +700,18 @@ footer {
 }
 
 
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
+    header {
+        grid-template-columns: 5fr 1fr 1fr;
+    }
+
     header nav {
         display: none;
     }
 
-    header {
-        grid-template-columns: repeat(2, 1fr);
+    header.language i {
+        color: black;
     }
-
     header .burger {
         display: block;
         width: 20px;
@@ -655,6 +719,11 @@ footer {
         position: relative;
         justify-self: end;
         cursor: pointer;
+        order: 1;
+    }
+    .language{
+        order: 2;
+        justify-self: end;
     }
 
     .burger-line1,
@@ -866,7 +935,7 @@ footer {
 }
 
 @media (max-width: 466px) {
-    .data-section{
+    .data-section {
         background-repeat: no-repeat;
         background-size: cover;
     }

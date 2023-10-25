@@ -3,7 +3,6 @@ const headerEl = document.querySelector("header")
 const scrollToTop = document.querySelector(".scrollToTop");
 
 
-
 /*AboutUs div块生成*/
 const featuresContainer = document.getElementById("features-container");
 const AboutUsClassNames =
@@ -123,10 +122,22 @@ createMode3Div(
     contents
 )
 // -------------------------------------------------------
+const selectMenu = document.getElementById("selectMenu")
+const languageMenuIcon = document.getElementById("languageMenuIcon")
+languageMenuIcon.addEventListener("click", () => {
+    if ((selectMenu.style.display === "none")) {
+        console.log(1)
+        selectMenu.style.display = "block"
+    } else {
+        selectMenu.style.display = "none"
+    }
+})
 
+//监听header移动距离
 window.addEventListener("scroll", () => {
+    //header距离
     let height = headerEl.getBoundingClientRect().height;
-    if (window.pageYOffset - height > 800) {
+    if (window.scrollY - height > 500) {
         if (!headerEl.classList.contains("sticky")) {
             headerEl.classList.add("sticky");
         }
@@ -134,14 +145,16 @@ window.addEventListener("scroll", () => {
         headerEl.classList.remove("sticky");
     }
 
-    if (window.pageYOffset > 1000) {
+    //右下角按钮
+    if (window.scrollY > 1000) {
         scrollToTop.style.display = "block";
     } else {
         scrollToTop.style.display = "none";
     }
 });
-const glide = new Glide(".glide");
 
+/* 轮播*/
+const glide = new Glide(".glide");
 const captionsEL = document.querySelectorAll(".slide-caption");
 glide.on(["mount.after", "run.after"], () => {
     const caption = captionsEL[glide.index];
@@ -150,7 +163,7 @@ glide.on(["mount.after", "run.after"], () => {
         opacity: [0, 1],
         duration: 400,
         easing: "spring(1, 80, 10, 0)",
-        delay: anime.stagger(400, { start: 300 }),
+        delay: anime.stagger(400, {start: 300}),
         translateY: [anime.stagger([40, 10]), 0],
     });
 });
@@ -161,7 +174,7 @@ glide.on("run.before", () => {
 });
 glide.mount();
 
-const isotope = new Isotope(".cases",{
+const isotope = new Isotope(".cases", {
     // 行模式布局
     layoutMode: "fitRows",
     itemSelector: ".case-item",
@@ -169,26 +182,26 @@ const isotope = new Isotope(".cases",{
 
 const filterBtns = document.querySelector(".filter-btns")
 
-filterBtns.addEventListener("click",e=>{
+filterBtns.addEventListener("click", e => {
     let {target} = e;
     const filterOption = target.getAttribute("data-filter");
-    if(filterOption){
-        document.querySelectorAll(".filter-btn.active").forEach(btn=>btn.classList.remove("active"));
+    if (filterOption) {
+        document.querySelectorAll(".filter-btn.active").forEach(btn => btn.classList.remove("active"));
         target.classList.add("active");
-        isotope.arrange({filter:filterOption});
+        isotope.arrange({filter: filterOption});
     }
 })
 
-const staggeringOption ={
-    delay:300,
+const staggeringOption = {
+    delay: 300,
     distance: "50px",
-    duration:500,
-    easing:"ease-in-out",
-    origin:"bottom",
+    duration: 500,
+    easing: "ease-in-out",
+    origin: "bottom",
 }
 
-ScrollReveal().reveal(".feature",{ ...staggeringOption,interval:350});
-ScrollReveal().reveal(".service-item",{ ...staggeringOption,interval:350});
+ScrollReveal().reveal(".feature", {...staggeringOption, interval: 350});
+ScrollReveal().reveal(".service-item", {...staggeringOption, interval: 350});
 const dataSectionEl = document.querySelector(".data-section");
 
 ScrollReveal().reveal(".data-section", {
@@ -215,12 +228,12 @@ window.addEventListener("scroll", () => {
     }
 });
 
-const scroll = new SmoothScroll('nav a[href*="#"],.scrollToTop a[href*="#"]',{
-    header:"header",
-    offset:80,
+const scroll = new SmoothScroll('nav a[href*="#"],.scrollToTop a[href*="#"]', {
+    header: "header",
+    offset: 80,
 })
-document.addEventListener("scrollStart",()=>{
-    if (headerEl.classList.contains("open")){
+document.addEventListener("scrollStart", () => {
+    if (headerEl.classList.contains("open")) {
         headerEl.classList.remove("open")
     }
 })
@@ -233,6 +246,6 @@ exploreBtnEls.forEach((exploreBtnEl) => {
 
 // 折叠按钮
 const burgerEl = document.querySelector(".burger");
-burgerEl.addEventListener("click",() =>{
+burgerEl.addEventListener("click", () => {
     headerEl.classList.toggle("open")
 })

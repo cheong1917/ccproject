@@ -6,16 +6,19 @@
 		      name="viewport">
 		<meta content="ie=edge" http-equiv="X-UA-Compatible">
 		<script src="/libs/scrollReveal/scrollreveal.min.js"></script>
-		<link rel="stylesheet" href="libs/glide/glide.core.min.css">
-		<link rel="stylesheet" href="libs/glide/glide.theme.min.css">
+		<link href="libs/glide/glide.core.min.css" rel="stylesheet">
+		<link href="libs/glide/glide.theme.min.css" rel="stylesheet">
 		<link href="style.css" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-		<link rel="icon" type="image/svg+xml" href="images/logo.svg" />
-		<title>cc</title>
+		<link href="images/logo.svg" rel="icon" type="image/svg+xml"/>
+		<title>testing</title>
 	</head>
+
 	<body>
 		<header>
-			<div class="logo">TestDemo</div>
+			<div class="logo">
+				<a href="#home">TestDemo</a>
+			</div>
 			<nav>
 				<a href="#home">首页</a>
 				<a href="#into1">关于我们</a>
@@ -23,8 +26,11 @@
 				<a href="#into3">Lorem ipsum</a>
 				<a href="#into4">Lorem ipsum</a>
 				<a href="#into6">Lorem ipsum</a>
-				<i class="fa-solid fa-globe-americas fa-sm"></i>
 			</nav>
+			<div class="language">
+				<i id="languageMenuIcon" class=" fa-solid fa-globe-americas fa-sm"></i>
+			</div>
+			
 			<!--折叠导航-->
 			<div class="burger">
 				<div class="burger-line1"></div>
@@ -32,8 +38,16 @@
 				<div class="burger-line3"></div>
 			</div>
 		</header>
-		<!--carousel-->
-		<div id="home" class="glide">
+		
+		<div id="selectMenu" class="showLanguageMenu">
+			<div class="LMenu">
+				<span class="option">Chinese</span>
+				<span class="option">English</span>
+				<span class="option">未完成..</span>
+			</div>
+		</div>
+		
+		<div class="glide" id="home">
 			<div class="glide__track" data-glide-el="track">
 				<!--item的容器--s-->
 				<div class="glide__slides">
@@ -68,7 +82,7 @@
 							</button>
 						</div>
 						<div class="backdrop"></div>
-						<video src="videos/city(19201080).mp4" muted autoplay loop></video>
+						<video autoplay loop muted src="videos/city(19201080).mp4"></video>
 					</div>
 				</div>
 			</div>
@@ -88,18 +102,19 @@
 		</div>
 		<!--span2-a2-->
 		<div class="content-wrapper">
+			
 			<!--into1-->
-			<section id="into1" class="about-us">
+			<section class="about-us" id="into1">
 				<h2 class="title1">关于我们</h2>
 				<p class="intro">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque doloribus fugit harum ipsum officiis
 					pariatur quod rerum totam voluptates voluptatibus?
 				</p>
-				<div id="features-container" class="features"></div>
+				<div class="features" id="features-container"></div>
 			</section>
 			
 			<!--into2-->
-			<section id="into2" class="showcases section-bg">
+			<section class="showcases section-bg" id="into2">
 				<h2 class="title1">售后保障</h2>
 				<div class="filter-btns">
 					<button class="filter-btn active" data-filter="*">all item</button>
@@ -107,25 +122,25 @@
 					<button class="filter-btn" data-filter=".Classification2">item2</button>
 					<button class="filter-btn" data-filter=".Classification3">item3</button>
 				</div>
-				<div id="Cases" class="cases"></div>
+				<div class="cases" id="Cases"></div>
 			</section>
 			
 			<!--into3-->
-			<section id="into3" class="service">
+			<section class="service" id="into3">
 				<h2 class="title1">Lorem ipsum</h2>
 				<p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolore esse iusto, sed
 					sit soluta.</p>
-				<div id="services-container" class="services"></div>
+				<div class="services" id="services-container"></div>
 			</section>
 			
 			<!--into4-->
-			<section id="into4" class="team-intro section-bg">
+			<section class="team-intro section-bg" id="into4">
 				<h2 class="title1">Lorem ipsum</h2>
 				<div class="team-contents">
 					<!--card1-->
 					<div class="team-content">
 						<div class="profile-image">
-							<img src="https://picsum.photos/1000" alt="">
+							<img alt="" src="https://picsum.photos/1000">
 						</div>
 						<h4 class="name">Lorem</h4>
 						<p class="position">Lorem ipsum dolor</p>
@@ -155,7 +170,7 @@
 					<!--card2-->
 					<div class="team-content">
 						<div class="profile-image">
-							<img src="https://picsum.photos/1100" alt="">
+							<img alt="" src="https://picsum.photos/1100">
 						</div>
 						<h4 class="name">Lorem</h4>
 						<p class="position">Lorem ipsum dolor</p>
@@ -185,7 +200,7 @@
 					<!--card3-->
 					<div class="team-content">
 						<div class="profile-image">
-							<img src="https://picsum.photos/1200" alt="">
+							<img alt="" src="https://picsum.photos/1200">
 						</div>
 						<h4 class="name">Lorem</h4>
 						<p class="position">Lorem ipsum dolor</p>
@@ -215,7 +230,7 @@
 					<!--card4-->
 					<div class="team-content">
 						<div class="profile-image">
-							<img src="https://picsum.photos/1300" alt="">
+							<img alt="" src="https://picsum.photos/1300">
 						</div>
 						<h4 class="name">Lorem</h4>
 						<p class="position">Lorem ipsum dolor</p>
@@ -273,13 +288,13 @@
 			</section>
 			
 			<!--into6-->
-			<section id="into6" class="company-activities">
+			<section class="company-activities" id="into6">
 				<h2 class="title1">Lorem ipsum</h2>
 				<p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 				<div class="activities">
 					<div class="activity">
 						<div class="arc-img-wrapper">
-							<img src="https://picsum.photos/1920/1060" alt="">
+							<img alt="" src="https://picsum.photos/1920/1060">
 						</div>
 						<div class="meta">
 							<p class="date-published">
@@ -303,7 +318,7 @@
 					
 					<div class="activity">
 						<div class="arc-img-wrapper">
-							<img src="https://picsum.photos/1920/1065" alt="">
+							<img alt="" src="https://picsum.photos/1920/1065">
 						</div>
 						<div class="meta">
 							<p class="date-published">
@@ -327,7 +342,7 @@
 					
 					<div class="activity">
 						<div class="arc-img-wrapper">
-							<img src="https://picsum.photos/1920/1070" alt="">
+							<img alt="" src="https://picsum.photos/1920/1070">
 						</div>
 						<div class="meta">
 							<p class="date-published">
@@ -432,7 +447,9 @@
 				<p class="icp-info">Lorem ipsum dolor</p>
 				<p class="rights">Lorem ipsum dolor sit amet, consectetur</p>
 				<div class="scrollToTop">
-					<a href="#home"><i class="fas fa-chevron-up"></i></a>
+					<a href="#home">
+						<i class="fas fa-chevron-up"></i>
+					</a>
 				</div>
 			</div>
 		</footer>
